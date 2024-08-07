@@ -96,22 +96,18 @@
         <h1 class="text my-1"><u>Contact</u></h1>
         <div class="row justify-content-center">
           <div class="col-md-6 py-5 ">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputname" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <form id="emailfrom">
+              <div class="mb-4">
+                <label for="input" class="form-label">Name</label>
+                <input type="text" class="form-control" id="input" aria-describedby="emailHelp">
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Mobile</label>
-                <input type="number" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div class="mb-4">
+                  <label for="input2" class="form-label">Email address</label>
+                  <input type="input2" class="form-control" id="input2" aria-describedby="emailHelp">
                 </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Subject</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div class="mb-4">
+                  <label for="input3"    class="form-label">Subject</label>
+                  <textarea class="form-control" id="input3" rows="3"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -137,4 +133,46 @@
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  document.getElementById('emailForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Get input values
+  var input1 = document.getElementById('input1').value;
+  var input2 = document.getElementById('input2').value;
+  var input3 = document.getElementById('input3').value;
+
+  // Construct email body
+  var emailBody = "Input 1: " + input1 + "\n" +
+                  "Input 2: " + input2 + "\n" +
+                  "Input 3: " + input3;
+
+  // Send email using a server-side script
+  // Example: You would typically use an AJAX request or similar method here to send data to a server endpoint
+  // that can handle email sending. Below is a placeholder example:
+
+  // Replace 'your-email-sending-endpoint' with your actual server-side script URL
+  fetch('your-email-sending-endpoint', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      emailBody: emailBody
+      // You may need additional fields depending on your server-side setup
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert('Email sent successfully!');
+    } else {
+      alert('Failed to send email. Please try again later.');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred while sending the email.');
+  });
+});
+</script>
 </html>
