@@ -1,0 +1,31 @@
+span,.name{
+      color: greenyellow;
+}
+
+
+.text{
+    text-align: center;
+    color:cyan;
+}
+.im{
+    border-radius: 10%;
+  
+}
+.skills{
+    height: 390px;
+    width: 330px;
+    border-radius: 15px;
+    background-color: black;
+    box-shadow: 2px 2px 2px 5px gold;
+    
+}
+.font{
+    text-align: center;
+    font-family: fantasy;
+    color:white;
+}
+
+
+.image{
+    padding: 15px;
+}
