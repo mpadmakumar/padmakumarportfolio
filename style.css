@@ -9,7 +9,7 @@ span,.name{
 }
 .im{
     border-radius: 10%;
-  
+    
 }
 .skills{
     height: 390px;
@@ -19,6 +19,7 @@ span,.name{
     box-shadow: 2px 2px 2px 5px gold;
     
 }
+
 .font{
     text-align: center;
     font-family: fantasy;
@@ -28,4 +29,15 @@ span,.name{
 
 .image{
     padding: 15px;
+  scale: 0.7;
+  transition: scale 0.4s linear;
+
+
+}
+.image:hover{
+    scale: 1;
+}
+.t{
+    background-color: greenyellow;
+    color: black;
 }
