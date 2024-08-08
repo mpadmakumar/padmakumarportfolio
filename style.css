@@ -9,7 +9,12 @@ span,.name{
 }
 .im{
     border-radius: 10%;
+    scale: 0.7;
+  transition: scale 0.4s linear;
     
+}
+.im:hover{
+    scale: 1;
 }
 .skills{
     height: 390px;
