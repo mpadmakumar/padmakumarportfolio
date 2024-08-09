@@ -29,6 +29,19 @@ span,.name{
     text-align: center;
     font-family: fantasy;
     color:white;
+    border-right: 3px solid orangered;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing steps(20,end)forwards infinite 8s;
+}
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
 }
 
 
